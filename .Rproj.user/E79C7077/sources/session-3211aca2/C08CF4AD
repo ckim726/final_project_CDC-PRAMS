@@ -1,0 +1,26 @@
+{
+    "id": "C08CF4AD",
+    "path": "~/Downloads/final_project/code/03_render_report.R",
+    "project_path": "code/03_render_report.R",
+    "type": "r_source",
+    "hash": "293204453",
+    "contents": "",
+    "dirty": false,
+    "created": 1774397142936.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "6,1",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1774399098,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1774399098823,
+    "read_only": false,
+    "read_only_alternatives": []
+}
