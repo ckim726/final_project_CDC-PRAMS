@@ -41,7 +41,13 @@ The analysis is organized into separate R scripts to ensure reproducibility:
 ## Output
 - Table: `output/table1.rds`  
 - Figure: `output/figure1.png`  
-- Final report: `final_docs/final_report.html`  
+
+## How to Generate the Final Report
+
+Run the following command: ```bash make
+
+This will generate the final report at:
+final_docs/final_report.html
 
 ---
 
