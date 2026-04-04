@@ -1,3 +1,5 @@
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
 all: final_docs/final_report.html
 	
 datadata/cleaned_data.rds: code/00_clean_data.R data/raw_data.csv

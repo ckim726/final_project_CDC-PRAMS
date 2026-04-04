@@ -52,4 +52,16 @@ final_docs/final_report.html
 ---
 
 ## Reproducibility
-All analyses are fully reproducible using the provided Makefile.
+To reproduce this project, follow these steps:
+
+1. Clone the repository:
+   git clone https://github.com/ckim726/final_project_CDC-PRAMS.git
+
+2. Navigate to the project directory:
+   cd final_project_CDC-PRAMS
+
+3. Restore the R package environment:
+   make install
+
+4. Build the report:
+   make
