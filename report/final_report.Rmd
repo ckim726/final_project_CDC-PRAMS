@@ -28,7 +28,7 @@ opts_chunk$set(
 ```{r, load data,include=FALSE}
 library(readr)
 library(tidyverse)
-CDC_data <- read_csv("/Users/chaeeun/Downloads/CDC_PRAMS.csv")
+CDC_data <- read_csv(here("data", "raw_data.csv"))
 
 ```
 

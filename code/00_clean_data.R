@@ -1,7 +1,7 @@
 library(tidyverse)
 library(here)
 
-CDC_data <- read_csv(here("data", "CDC_PRAMS.csv"))
+CDC_data <- read_csv(here("data", "raw_data.csv"))
 
 clean_data <- CDC_data  %>%
   select(where(~ !all(is.na(.))))
