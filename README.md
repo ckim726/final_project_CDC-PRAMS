@@ -47,7 +47,7 @@ The analysis is organized into separate R scripts to ensure reproducibility:
 Run the following command: ```bash make
 
 This will generate the final report at:
-final_docs/final_report.html
+report/final_report.html
 
 ---
 
@@ -65,3 +65,15 @@ To reproduce this project, follow these steps:
 
 4. Build the report:
    make
+   
+## Docker
+1. Build Docker Image
+docker build -t prams_project .
+
+2. Run Report
+make docker_report
+This will create a folder called report/ in your local directory containing the compiled HTML report.
+
+3.push to DockerHub
+https://hub.docker.com/r/ckim726/prams_project
+

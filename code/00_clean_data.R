@@ -1,7 +1,6 @@
 library(tidyverse)
-library(here)
 
-CDC_data <- read_csv(here("data", "raw_data.csv"))
+CDC_data <- read_csv("data/raw_data.csv")
 
 clean_data <- CDC_data  %>%
   select(where(~ !all(is.na(.))))
@@ -15,4 +14,4 @@ analytic <- clean_data %>%
     )
   )
 
-saveRDS(analytic, here::here("data/cleaned_data.rds"))
+saveRDS(analytic,"data/cleaned_data.rds")

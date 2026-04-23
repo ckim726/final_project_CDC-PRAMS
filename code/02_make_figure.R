@@ -1,8 +1,7 @@
 library(tidyverse)
-library(here)
 library(ggplot2)
 
-analytic <- readRDS(here("data/cleaned_data.rds"))
+analytic <- readRDS("data/cleaned_data.rds")
 
 plot <- analytic %>%
   group_by(LocationDesc, TimePeriod) %>%
@@ -25,4 +24,4 @@ plot2 <- ggplot(plot, aes(x = LocationDesc, y = Prevalence, fill = TimePeriod)) 
     text = element_text(size = 12)
   )
 
-ggsave(here::here("output/figure1.png"), plot2, width = 8, height = 5)
+ggsave(("output/figure1.png"), plot2, width = 8, height = 5)

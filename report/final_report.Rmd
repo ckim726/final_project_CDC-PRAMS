@@ -17,7 +17,6 @@ All analyses were conducted using a fully reproducible workflow.
 
 ```{r setup, include=FALSE}
 library(knitr)
-library(here)
 library(gt)
 
 opts_chunk$set(
@@ -28,7 +27,7 @@ opts_chunk$set(
 ```{r, load data,include=FALSE}
 library(readr)
 library(tidyverse)
-CDC_data <- read_csv(here("data", "raw_data.csv"))
+CDC_data <- read_csv("../data/raw_data.csv")
 
 ```
 
@@ -37,7 +36,7 @@ CDC_data <- read_csv(here("data", "raw_data.csv"))
 The dataset was filtered to include smoking behavior before pregnancy and during the last trimester (QUO30 and QUO31). It was then reshaped to compare prevalence across time periods and to calculate the reduction in smoking for each location.
 
 ```{r, table}
-table1 <- readRDS(here("output/table1.rds"))
+table1 <- readRDS("../output/table1.rds")
 
 table1 %>%
   gt() %>%
@@ -58,7 +57,7 @@ Table 1 summarizes smoking prevalence before pregnancy and during the last trime
 ## Graphical Analysis
 Below is a bar graph comparing smoking prevalence before pregnancy and during the last trimester across locations in the United States.
 ```{r,graphic}
-knitr::include_graphics(here("output/figure1.png"))
+knitr::include_graphics("../output/figure1.png")
 ```
 Figure 1 shows that smoking prevalence is consistently lower during pregnancy compared to before pregnancy across all locations. There is also notable geographic variation, with some locations exhibiting substantially higher prevalence levels than others.
 

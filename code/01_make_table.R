@@ -1,6 +1,6 @@
 library(tidyverse)
 library(gt)
-analytic <- readRDS(here::here("data/cleaned_data.rds"))
+analytic <- readRDS("data/cleaned_data.rds")
 
 clean_table <- analytic %>%
   select(LocationDesc, TimePeriod, Data_Value) %>%
@@ -31,4 +31,4 @@ clean_table %>%
   ) %>%
   fmt_number(columns = c(Before, During, Reduction), decimals = 1)
 
-saveRDS(clean_table, here::here("output/table1.rds"))
+saveRDS(clean_table,"output/table1.rds")
