@@ -71,7 +71,8 @@ To reproduce this project, follow these steps:
 docker build -t prams_project .
 
 2. Run Report
-make docker_report
+Mac/Linux-OS-specific
+docker run --rm -v "$(pwd)/report:/final_project/report" prams_project
 This will create a folder called report/ in your local directory containing the compiled HTML report.
 
 3.push to DockerHub
