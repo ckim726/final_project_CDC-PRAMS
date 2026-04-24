@@ -1,5 +1,4 @@
 # CDC_PRAMS Smoking Analysis
-
 ---
 
 ## Code Structure
@@ -26,7 +25,6 @@ The analysis is organized into separate R scripts to ensure reproducibility:
   - Renders the final report using R Markdown  
 
 ---
-
 ## Table and Figure
 
 - **Table 1**
@@ -42,30 +40,24 @@ The analysis is organized into separate R scripts to ensure reproducibility:
 - Table: `output/table1.rds`  
 - Figure: `output/figure1.png`  
 
-## How to Generate the Final Report
+## Using the Makefile
+This project uses a Makefile to automate the workflow.
 
-Run the following command: ```bash make
-
-This will generate the final report at:
+## Generate Report Locally
+```bash 
+make
+```
+This will run all scripts and generate: 
 report/final_report.html
 
----
+# Generate Report Using Docker
+make docker_report
 
-## Reproducibility
-To reproduce this project, follow these steps:
+This will:
+Run the analysis inside a Docker container
+Mount a local report/ directory
+Save the compiled HTML report to your local machine
 
-1. Clone the repository:
-   git clone https://github.com/ckim726/final_project_CDC-PRAMS.git
-
-2. Navigate to the project directory:
-   cd final_project_CDC-PRAMS
-
-3. Restore the R package environment:
-   make install
-
-4. Build the report:
-   make
-   
 ## Docker
 1. Build Docker Image
 docker build -t prams_project .
@@ -77,4 +69,17 @@ This will create a folder called report/ in your local directory containing the 
 
 3.push to DockerHub
 https://hub.docker.com/r/ckim726/prams_project
+---
+## Reproducibility
+To reproduce this project, follow these steps:
+1. Clone the repository:
+   git clone git@github.com:ckim726/final_project_CDC-PRAMS.git
 
+2. Navigate to the project directory:
+   cd final_project_CDC-PRAMS
+
+3. Restore the R package environment:
+   make install
+
+4. Build the report:
+   make

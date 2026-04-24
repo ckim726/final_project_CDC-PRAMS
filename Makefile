@@ -15,6 +15,10 @@ output/figure1.png: code/02_make_figure.R data/cleaned_data.rds
 report/final_report.html: report/final_report.Rmd \
   output/table1.rds output/figure1.png
 	Rscript code/03_render_report.R
+	
+docker_report:
+	mkdir -p report
+	docker run --rm -v "$$(pwd)/report:/final_project/report" prams_project
 
 clean:
 	rm -f output/* final_docs/* data/cleaned_data.rds
