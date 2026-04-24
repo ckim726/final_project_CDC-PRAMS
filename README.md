@@ -51,8 +51,9 @@ This will run all scripts and generate:
 report/final_report.html
 
 # Generate Report Using Docker
+```bashe
 make docker_report
-
+```
 This will:
 Run the analysis inside a Docker container
 Mount a local report/ directory
