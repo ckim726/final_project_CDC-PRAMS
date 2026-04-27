@@ -51,7 +51,7 @@ This will run all scripts and generate:
 report/final_report.html
 
 # Generate Report Using Docker
-```bashe
+```bash
 make docker_report
 ```
 This will:

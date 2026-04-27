@@ -18,7 +18,7 @@ report/final_report.html: report/final_report.Rmd \
 	
 docker_report:
 	mkdir -p report
-	docker run --rm -v "$$(pwd)/report:/final_project/report" prams_project
+	docker run --rm -v "$$(pwd)/report:/final_project/report" ckim726/prams_project:latest
 
 clean:
 	rm -f output/* final_docs/* data/cleaned_data.rds
